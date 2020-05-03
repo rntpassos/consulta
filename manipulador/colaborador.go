@@ -14,6 +14,7 @@ import (
 	"github.com/rntpassos/consulta/modelo"
 )
 
+//RotearColaborador roteia colaboradores
 func RotearColaborador(w http.ResponseWriter, r *http.Request) {
 	switch r.Method {
 	case "GET":
@@ -112,6 +113,7 @@ func buscaColaborador(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+//ListarColaboradores Lista colaboradores
 func ListarColaboradores(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	colaboradores := make([]modelo.Colaborador, 0)

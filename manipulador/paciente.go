@@ -14,6 +14,7 @@ import (
 	"github.com/rntpassos/consulta/modelo"
 )
 
+//RotearPaciente roteia o caminho de Pacientes
 func RotearPaciente(w http.ResponseWriter, r *http.Request) {
 	switch r.Method {
 	case "GET":
@@ -141,6 +142,7 @@ func cadastrarPaciente(w http.ResponseWriter, r *http.Request) {
 	ListarPacientes(w, r)
 }
 
+//ListarPacientes Lista clientes
 func ListarPacientes(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	pacientes := make([]modelo.Paciente, 0)
